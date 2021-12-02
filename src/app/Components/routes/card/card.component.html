@@ -1,0 +1,31 @@
+<h1>Home card</h1>
+<div>
+    
+
+
+      <table class="border " >
+        <tr  *ngFor="let user of users">
+             <td class="p-2 border ">{{user.thumbnailUrl}}</td> 
+             <td class="p-2 border ">{{user.nombre}}</td> 
+             <td class="p-2 border ">{{user.apellido}}</td> 
+            
+             <td class="p-2 border ">{{user.thumbnailUrl}}</td> 
+         </tr>
+    </table>  
+<div class="container-fluid ">
+
+    <div *ngFor='let user of users' class="d-flex">
+        <img src="{{user.thumbnailUrl}}" alt="" class=""> 
+    </div>
+</div>
+
+   <table class="border " >
+        <tr  *ngFor="let usuario of usuarios">
+             <td class="p-2 border ">{{usuario.id}}</td> 
+             <td class="p-2 border ">{{usuario.name}}</td> 
+             
+         </tr>
+    </table> 
+
+    <button class="btn btn-primary btn m-5" routerLink="/">Vamos a Jugar</button>
+</div>

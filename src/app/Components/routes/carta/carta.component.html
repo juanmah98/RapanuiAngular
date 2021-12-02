@@ -1,0 +1,72 @@
+<body class="bg-carta ">
+  <div class="container-fluid py-5 ">
+
+
+
+    <div class="row align-items-center" >
+
+
+
+      <div class="col-12 al p-2" >
+        <h1 class="text-center text-warning fw-bold fw-rapa">{{titulo}}</h1>
+      </div>
+
+      <div class="col-12  p-2  ">
+        <img class="w-100 " src="../../../../assets/imagenes/PARTE0.jpg" alt="">
+      </div>
+
+      <div class="col-12 col-lg-6 p-2 " *ngFor="let carta of cartas">
+        <img class="w-100" src="{{carta.img}}" alt="">
+      </div>
+
+      <!-- <div class="col-12 col-lg-6 p-2 ">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE2.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE3.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE4.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE5.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE6.jpg" alt="" >
+        </div>
+        
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE8.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE9.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE10.jpg" alt="" >
+        </div>
+        <div class="col-12 col-lg-6 p-2">
+            <img class="w-100" src="../../../../assets/imagenes/PARTE11.jpg" alt="" >
+        </div> -->
+
+      <div class="col-12 al p-2">
+        <h1 class="text-center text-warning fw-bold fw-rapa">{{titulo2}}</h1>
+      </div>
+
+      <div class="col-12  p-2">
+        <img class="w-100" src="../../../../assets/imagenes/PROMOS.jpg" alt="">
+      </div>
+
+
+      <div class="col-12 col-lg-6 p-2 " *ngFor="let carta of del">
+        <img class="w-100" src="{{carta.img}}" alt="">
+      </div>
+
+      <!-- <div class="col-12 col-lg-6 p-2 " >
+            <img class="w-100" src="../../../../assets/imagenes/PARTE11-DEL.jpg" alt="" >
+        </div>  -->
+
+
+    </div>
+
+  </div>
+</body>

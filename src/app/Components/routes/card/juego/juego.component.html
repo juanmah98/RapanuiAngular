@@ -1,0 +1,5 @@
+<h2>Juego Componente</h2>
+<div class="container my-5 text-center">
+    <app-game-control (gameStarted)="onStartCounter($event)"></app-game-control>
+    <app-odd *ngFor="let oddNum of oddNumbers" [oddNumber]="oddNum"></app-odd>
+  </div>
