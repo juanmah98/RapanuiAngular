@@ -28,7 +28,7 @@
             </div>
 
             <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
+                <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="direccion">
                     Direccion
                 </label>
                 <input
@@ -36,24 +36,41 @@
                     formControlName="direccion" [ngClass]="{ 'is-invalid':  form.direccion.errors }"  id="dir" type="text" placeholder="Ingresa tus direccion" required>
             </div>
 
-            <!-- <div *ngIf="form.direccion.errors" class="invalid-deedback">
-                <div *ngIf="form.direccion.errors.required">La direccion es obligatorio</div>
+             <div *ngIf="form.direccion.errors" class="invalid-deedback">
+                <div *ngIf="form.direccion.errors.required"> <div class="alert alert-success d-flex align-items-center"  role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-octagon m-1 " viewBox="0 0 16 16">
+                        <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                      </svg>
+                    <div>
+                      Ingrese una direccion / Campo obligatorio
+                    </div>
+                  </div> 
+                </div>
 
-            </div> -->
+            </div> 
 
             <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
-                    Número de Telefono
+                <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold " for="name">
+                    Telefono
                 </label>
                 <input
-                    class=" form-control shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    formControlName="telefono"   id="telefono" type="number" placeholder="Ingresa tu telefono" required>
+                    class="form-control  shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    formControlName="tel" [ngClass]="{ 'is-invalid':  form.tel.errors }"  id="tel" type="text" placeholder="Ingresa tu nombre" required>
             </div>
 
-             <!-- <div *ngIf="form.telefono.errors" class="invalid-deedback">
-                <div *ngIf="form.telefono.errors.required">El telefono es obligatorio</div>
+            <div *ngIf="form.tel.errors" class="invalid-deedback">
+                <div *ngIf="form.tel.errors.required"> <div class="alert alert-success d-flex align-items-center"  role="alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-octagon m-1 " viewBox="0 0 16 16">
+                        <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                      </svg>
+                    <div>
+                      Ingrese un nombre / Campo obligatorio
+                    </div>
+                  </div> </div>
 
-            </div>  -->
+            </div>  
 
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
@@ -61,13 +78,21 @@
                 </label>
                 <input
                     class="form-control shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    formControlName="pedido"   id="pedido" type="text" placeholder="Ingresa tu pedido" required>
+                    formControlName="pedido" [ngClass]="{ 'is-invalid':  form.pedido.errors }"   id="pedido" type="text" placeholder="Ingresa tu pedido" required>
             </div>
 
-            <!-- <div *ngIf="form.pedido.errors" class="invalid-deedback">
-                <div *ngIf="form.pedido.errors.required">El pedido es obligatorio</div>
+          <div *ngIf="form.pedido.errors" class="invalid-deedback">
+            <div *ngIf="form.pedido.errors.required"> <div class="alert alert-success d-flex align-items-center"  role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-octagon m-1 " viewBox="0 0 16 16">
+                    <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                  </svg>
+                <div>
+                  Ingrese su pedido / Campo obligatorio
+                </div>
+              </div> </div>
 
-            </div> -->
+            </div> 
 
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
@@ -78,10 +103,7 @@
                     formControlName="detalle"   id="detalle" type="text" placeholder="Detalle no obligatorio" >
             </div>
 
-            <!-- <div *ngIf="form.detalle.errors" class="invalid-deedback">
-                <div *ngIf="form.detalle.errors.required">El detalle es obligatorio</div>
-
-            </div> -->
+         
 
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name" >

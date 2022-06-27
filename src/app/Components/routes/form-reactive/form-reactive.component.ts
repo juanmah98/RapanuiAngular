@@ -21,8 +21,8 @@ export class FormReactiveComponent implements OnInit {
         direccion: ["", Validators.required],
         tel:["", Validators.required],
         pedido: ["", Validators.required],
-        detalle: ["", Validators.required],
-        pago: ["", Validators.required],
+        
+        
 
       },
       

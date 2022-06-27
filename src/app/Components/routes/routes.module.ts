@@ -11,6 +11,8 @@ import { EvenComponent } from './card/juego/even/even.component';
 import { FormReactiveComponent } from './form-reactive/form-reactive.component';
 import { FormTemplateComponent } from './form-template/form-template.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EjemploComponent } from './ejemplo/ejemplo.component';
+import { FrontComponent } from './front/front.component';
 
 
 
@@ -24,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EvenComponent,
     FormReactiveComponent,
     FormTemplateComponent,
+    EjemploComponent,
+    FrontComponent,
     
     
   ],

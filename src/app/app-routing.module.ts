@@ -9,6 +9,8 @@ import { EvenComponent } from './Components/routes/card/juego/even/even.componen
 import { OddComponent } from './Components/routes/card/juego/odd/odd.component';
 import { FormReactiveComponent } from './Components/routes/form-reactive/form-reactive.component';
 import { FormTemplateComponent } from './Components/routes/form-template/form-template.component';
+import { EjemploComponent } from './Components/routes/ejemplo/ejemplo.component';
+import { FrontComponent } from './Components/routes/front/front.component';
 
 const routes: Routes = [
 
@@ -21,7 +23,8 @@ const routes: Routes = [
   {path: 'form-template', component: FormTemplateComponent},
   {path: 'odd', component: OddComponent},
   {path: 'FormReactiveComponent', component: FormReactiveComponent},
-  {path: 'FormTemplateComponent', component: FormTemplateComponent}
+  {path: 'FormTemplateComponent', component: FormTemplateComponent},
+  {path: 'front', component: FrontComponent}
   
 
 

@@ -1,31 +1,103 @@
-<h1>Home card</h1>
-<div>
-    
-
-
-      <table class="border " >
-        <tr  *ngFor="let user of users">
-             <td class="p-2 border ">{{user.thumbnailUrl}}</td> 
-             <td class="p-2 border ">{{user.nombre}}</td> 
-             <td class="p-2 border ">{{user.apellido}}</td> 
+<div class="container-fluid  pt-5 bg-dark ">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active text-warning" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Carta</button>
+          <button class="nav-link text-warning" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Carrito</button>
+          
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent ">
+          <!-- Productos -->
+        <div class="tab-pane fade show active bg-dark" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             
-             <td class="p-2 border ">{{user.thumbnailUrl}}</td> 
-         </tr>
-    </table>  
-<div class="container-fluid ">
+            <div class="row ">
+                      
+                <div class="col container-fluid pt-2 text-light mb-5">
+         
+         
+               
+         
+                      <!-- Seccion Entradas -->
+                      <p class="fs-2 fw-bold px-1 text-warning">ENTRADAS</p>
+                  <div class=" "  *ngFor="let entradas of entradas">
+                     <!-- <p class="fs-2 fw-bold px-1 text-warning">{{entradas.title}}</p> -->
+                     
+                  <a href="" class="  text-decoration-none" data-bs-toggle="modal" data-bs-target="#NuggetModal">
+                     <div class="pt-3 pb-0 shadow ">
+                         <!-- <img src="../Imagenes/cheddar.jpg" alt="" width="200px" class="justify-content-end img-fluid rounded-3"> -->
+                         <div class="d-flex px-2 col-12 colorr ">  
+                             <p  class="fs-4 text-warning" (click)="setIndex('3')" >{{entradas.name}}</p>       
+                             <p  class="fs-4 text-warning" >&nbsp; </p>                       
+                             <!-- <p class="fs-6 text-light">{{entradas.desc}}</p> -->
+                             <p class="fs-4 fw-bold text-light ">{{entradas.precio}}</p>
+                          
+                     </div>
+                     </div>
+                  </a>
+         
+                  <!-- Modal -->
+                        
+                     
+         
+                 </div>
+                </div>     
+             </div> 
+             <div class="modal fade text-dark  " id="NuggetModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" >
+              <div class="modal-content">
+                  <div class="modal-header img-fondo align-items-start ">
+                  
+                  <button type="button " class="btn-close bg-light r" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body ">
+                  
+                  <h5 class="text-dark">{{titelName}}</h5>
+                  <p class="fs-6 ">{{titelDesc}}</p>
+                  
+                  <p class="fs-4 fw-bold ">{{titelPrecio}}</p>
+                  </div>
+                  <div class="d-flex justify-content-center pb-3">
+                     <button class="btn btn-success ">Agregar</button>
+                  </div>
+                  </div>
+              </div>
+              </div>   
 
-    <div *ngFor='let user of users' class="d-flex">
-        <img src="{{user.thumbnailUrl}}" alt="" class=""> 
+        </div>
+        <div class="tab-pane fade bg-dark carrito" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <table class="table table-dark table-hover">
+                <thead>
+                  <tr class="">
+                    <th scope="col">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td class="table__productos d-flex">
+                        <img src="../Imagenes/0.jpg" alt="" >
+                        <h6 class="title ">Titulo</h6>
+                    </td>
+                    <td class="table__precio"><p>$ 5</p></td>
+                    <td class="table__cantidad"><input type="number" min="1" value="1">
+                    <button class="delete btn btn-warning">x</button></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <br><br>
+              <div class="row mx-4">
+                  <div class="col">
+                      <h3 class="itemCartTotal text-light">Total: 0</h3>
+                  </div>
+                  <div class="col d-flex ">
+                      <button class="btn btn-success">COMPRAR</button>
+                  </div>
+              </div>
+        </div>
+        
+      </div>
     </div>
-</div>
-
-   <table class="border " >
-        <tr  *ngFor="let usuario of usuarios">
-             <td class="p-2 border ">{{usuario.id}}</td> 
-             <td class="p-2 border ">{{usuario.name}}</td> 
-             
-         </tr>
-    </table> 
-
-    <button class="btn btn-primary btn m-5" routerLink="/">Vamos a Jugar</button>
-</div>

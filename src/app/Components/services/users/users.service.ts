@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { environment } from 'src/environments/environment';
@@ -36,7 +36,10 @@ export class UsersService {
 
   // apiUrl = "https://jsonplaceholder.typicode.com";
  // apiUrl = "http://demo8931173.mockable.io/";
+ apiFolc= "https://clinica-folcademy-jmh.herokuapp.com";
   url: any;
+token = "9d39322c-dbbc-4fe1-b831-4f3244cb85f1";
+
 
   constructor(
    private _http: HttpClient
@@ -48,6 +51,11 @@ export class UsersService {
   getUsers():Observable<any>{
    return this._http.get(this.url + '/usuarios')
    //return this._http.get(this.url + '/medicos')
+  }
+
+  getMedicos():Observable<any>{
+    
+    return this._http.get(this.apiFolc + '/medicos')
   }
 
   getUsuarios():Observable<any>{
