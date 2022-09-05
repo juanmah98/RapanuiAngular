@@ -12,9 +12,8 @@ export class FormReactiveComponent implements OnInit {
   
   registerForm!: FormGroup;
   sumbitted = false;
-  constructor(private formBuilder: FormBuilder) { }
-  
-  ngOnInit(): void {
+  constructor(private formBuilder: FormBuilder) {
+
     this.registerForm = this.formBuilder.group(
       {
         name: ["", Validators.required],
@@ -27,6 +26,10 @@ export class FormReactiveComponent implements OnInit {
       },
       
     )
+   }
+  
+  ngOnInit(): void {
+   
   }
 
   get form(){
