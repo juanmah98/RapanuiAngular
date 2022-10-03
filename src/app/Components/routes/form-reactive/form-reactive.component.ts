@@ -21,20 +21,27 @@ export class FormReactiveComponent implements OnInit {
         direccion: ["", Validators.required],
         tel:["", Validators.required],
         pedido: ["", Validators.required],
-        
-        
-
+        detalle:[""]
       },
       
     )
+    
   }
 
-  get form(){
+  wtsp = 'https://api.whatsapp.com/send?phone=+5492646023766';
+  /* &text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + name + '%0A*Direccion:*%0A' + dir + '%0A*Telefono:*%0A' + telefono + '%0A*Pedido:*%0A' + pedido + '%0A*Detalle:*%0A' + detalle + '%0A*Forma de Pago:*%0A' + efectivo +  '' */
+ get form(){
     return this.registerForm.controls
-  }
+  } 
 
   onSumbit(){
-    console.log(this.registerForm)
+    console.log(this.registerForm.value);
+
+    var pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Direccion:*%0A' + this.registerForm.value.direccion + '%0A*Telefono:*%0A' + this.registerForm.value.telefono + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A';
+
+
+    window.location.href = pedido;
+    
   }
 
   onReset(){
