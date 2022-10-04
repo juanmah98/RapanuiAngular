@@ -12,6 +12,12 @@ export class FormReactiveComponent implements OnInit {
   
   registerForm!: FormGroup;
   sumbitted = false;
+  pedidoListo = false;
+  wtsp = 'https://api.whatsapp.com/send?phone=+5492646023766';
+  pedido = "";
+  formaDePago = "";
+  
+
   constructor(private formBuilder: FormBuilder) {
 
     this.registerForm = this.formBuilder.group(
@@ -20,7 +26,7 @@ export class FormReactiveComponent implements OnInit {
         direccion: ["", Validators.required],
         tel:["", Validators.required],
         pedido: ["", Validators.required],
-        detalle:[""]
+        detalle:[""],
       },
       
     )
@@ -31,7 +37,6 @@ export class FormReactiveComponent implements OnInit {
    
   }
 
-  wtsp = 'https://api.whatsapp.com/send?phone=+5492646023766';
   /* &text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + name + '%0A*Direccion:*%0A' + dir + '%0A*Telefono:*%0A' + telefono + '%0A*Pedido:*%0A' + pedido + '%0A*Detalle:*%0A' + detalle + '%0A*Forma de Pago:*%0A' + efectivo +  '' */
  get form(){
     return this.registerForm.controls
@@ -40,16 +45,35 @@ export class FormReactiveComponent implements OnInit {
   onSumbit(){
     console.log(this.registerForm.value);
 
-    var pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Direccion:*%0A' + this.registerForm.value.direccion + '%0A*Telefono:*%0A' + this.registerForm.value.tel + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A';
+    /* var pedido = */ this.pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Direccion:*%0A' + this.registerForm.value.direccion + '%0A*Telefono:*%0A' + this.registerForm.value.tel + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A' + this.formaDePago;
+    this.pedidoListo = true;
 
-
-    window.location.href = pedido;
+    /* window.location.href = pedido; */
     
+    
+  }
+
+  Send(){
+    window.location.href = this.pedido ; 
+    this.onReset();
+  }
+
+  Edit(){
+    this.pedidoListo = false;
+    this.formaDePago = "Efectivo";
   }
 
   onReset(){
     this.sumbitted = false;
     this.registerForm.reset();
+  }
+
+  Efectivo(){
+    this.formaDePago = "Efectivo";
+  }
+
+  Transferencia(){
+    this.formaDePago = "Transferencia bancaria";
   }
 
 }
