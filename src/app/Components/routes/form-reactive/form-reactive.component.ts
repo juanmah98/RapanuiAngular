@@ -16,6 +16,8 @@ export class FormReactiveComponent implements OnInit {
   wtsp = 'https://api.whatsapp.com/send?phone=+5492646023766';
   pedido = "";
   formaDePago = "";
+  formaDelivery = "";
+  delivery = true;
   
 
   constructor(private formBuilder: FormBuilder) {
@@ -45,7 +47,12 @@ export class FormReactiveComponent implements OnInit {
   onSumbit(){
     console.log(this.registerForm.value);
 
-    /* var pedido = */ this.pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Direccion:*%0A' + this.registerForm.value.direccion + '%0A*Telefono:*%0A' + this.registerForm.value.tel + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A' + this.formaDePago;
+    if(this.delivery){      
+      this.pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Direccion:*%0A' + this.registerForm.value.direccion + '%0A*Telefono:*%0A' + this.registerForm.value.tel + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A' + this.formaDePago;
+    }else
+    {         
+      this.pedido = this.wtsp + '&text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + this.registerForm.value.name + '%0A*Take away:*%0A' + "El cliente retira el pedido" + '%0A*Telefono:*%0A' + this.registerForm.value.tel + '%0A*Pedido:*%0A' + this.registerForm.value.pedido + '%0A*Detalle:*%0A' + this.registerForm.value.detalle + '%0A*Forma de Pago:*%0A' + this.formaDePago;
+       }
     this.pedidoListo = true;
 
     /* window.location.href = pedido; */
@@ -60,6 +67,7 @@ export class FormReactiveComponent implements OnInit {
 
   Edit(){
     this.pedidoListo = false;
+    this.delivery = true;
     this.formaDePago = "Efectivo";
   }
 
@@ -74,6 +82,14 @@ export class FormReactiveComponent implements OnInit {
 
   Transferencia(){
     this.formaDePago = "Transferencia bancaria";
+  }
+
+  Delivery(){
+    this.delivery = true;
+  }
+
+  TakeAway(){
+    this.delivery = false;
   }
 
 }

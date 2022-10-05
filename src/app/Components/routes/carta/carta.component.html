@@ -1,72 +1,128 @@
-<body class="bg-carta ">
-  <div class="container-fluid py-5 ">
+<body class="bg-carta  ">
 
+  <header class=" container-fluid f-rapa">
+      <nav class="navbar navbar-expand navbar-light bg-black fixed-top  ">
 
-
-    <div class="row align-items-center" >
-
-
-
-      <div class="col-12 al p-2" >
-        <h1 class="text-center text-warning fw-bold fw-rapa">{{titulo}}</h1>
+        <div class="container-fluid d-flex justify-content-start ">
+         
+          <a href="./html/planb.html" class="chau"><p class="text-black">chau</p></a>
       </div>
 
-      <div class="col-12  p-2  ">
-        <img class="w-100 " src="../../../../assets/imagenes/PARTE0.jpg" alt="">
-      </div>
+          <div class="container-fluid d-flex justify-content-end ">
+          
+              <a class="navbar-brand text-light  " href="./index.html">HOME</a>
+              <a class="navbar-brand text-warning" href="./carta.html">CARTA</a>
+              <a class="navbar-brand text-light" href="./html/wtsp.html">DELIVERY</a>
+          </div>
+          
+      </nav>
+    </header>
 
-      <div class="col-12 col-lg-6 p-2 " *ngFor="let carta of cartas">
-        <img class="w-100" src="{{carta.img}}" alt="">
-      </div>
+  <div class="container-fluid py-5 my-1 fw-rapa">
+      
+          
+          
+      
 
-      <!-- <div class="col-12 col-lg-6 p-2 ">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE2.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE3.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE4.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE5.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE6.jpg" alt="" >
-        </div>
-        
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE8.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE9.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE10.jpg" alt="" >
-        </div>
-        <div class="col-12 col-lg-6 p-2">
-            <img class="w-100" src="../../../../assets/imagenes/PARTE11.jpg" alt="" >
-        </div> -->
+      <div class="row align-items-center ">
+          
+          <div class="col-12 al p-2 pb-1 pt-4"><h1 class="text-center text-warning fw-bold">CARTA <img src="./Logos/LOGO-PNG.png" width="70px" alt=""></h1> </div>
+                     
+              
+              <div class=" " id="list-example" class="list-group"  >
+      
+                <a  class="text-decoration-none text-warning "  href="#list-item-1" >
+                  <p class="  m-0 p-0 text-center fs-3 "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg> PROMOS <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg><p class="fs-5 text-light m-0 pb-1 text-center">(Click para bajar)</p>
+                </a>        
+               
+              </div>
+           
 
-      <div class="col-12 al p-2">
-        <h1 class="text-center text-warning fw-bold fw-rapa">{{titulo2}}</h1>
-      </div>
+          
+          <!-- <div class="col-12  p-2  " >
+              <img class="w-100 " src="./Imagenes/PARTE0.jpg" alt="" >
+          </div> -->
 
-      <div class="col-12  p-2">
-        <img class="w-100" src="../../../../assets/imagenes/PROMOS.jpg" alt="">
-      </div>
+          <div class="col-12 p-2 ">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE0.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
 
+          <div class="col-12 col-lg-6 p-2 ">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE1.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2 ">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE2.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE3.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE4.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE5.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE6.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE8.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE9.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE10-DEL.jpg" alt="" >
+              
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE11-DEL.jpg" alt="" >
+              
+          </div>
+          
+          <div class="col-12 al p-2"><h1 class="text-center text-warning fw-bold " id="list-item-1">DELIVERY  <img src="./Logos/LOGO-DELIVERY.png" width="130px" alt=""></h1></div>
 
-      <div class="col-12 col-lg-6 p-2 " *ngFor="let carta of del">
-        <img class="w-100" src="{{carta.img}}" alt="">
-      </div>
+          <div class="col-12  p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PROMOS.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
 
-      <!-- <div class="col-12 col-lg-6 p-2 " >
-            <img class="w-100" src="../../../../assets/imagenes/PARTE11-DEL.jpg" alt="" >
-        </div>  -->
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE10-DEL.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          <div class="col-12 col-lg-6 p-2">
+              <img class="w-100" src="../../../../assets/Imagenes/PARTE11-DEL.jpg" alt="" >
+              <p class="t-credito text-warning text-center pt-1 ">Recargo con tarjeta de credito + 10%</p>
+          </div>
+          
 
-
-    </div>
-
+      </div>   
+      
   </div>
+
+  <footer>
+                                  
+      <div class="col-12 bg-black position-absolute  end-0 ">
+                  
+          <p class="prim text-center text-light w-100 pt-3 pb-2">RAPA-NUI LOMOS 2017 - TODOS LOS DERECHOS RESERVADOS <a href="https://bricode-sj.web.app/"><img src="./Logos/logopng.png" width="75px" alt="" class="jh"></a> </p>
+          
+          
+      </div>
+    </footer>
+  
 </body>
