@@ -25,14 +25,14 @@ export class FormReactiveComponent implements OnInit {
     this.registerForm = this.formBuilder.group(
       {
         name: ["", Validators.required],
-        direccion: ["", Validators.required],
+        direccion: [""],
         tel:["", Validators.required],
         pedido: ["", Validators.required],
         detalle:[""],
       },
       
     )
-    
+  
    }
   
   ngOnInit(): void {
