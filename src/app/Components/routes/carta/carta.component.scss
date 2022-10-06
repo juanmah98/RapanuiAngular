@@ -1,16 +1,16 @@
 @font-face {
     font-family: "carta";
-    src: url(../../../../assets/fonts/eras-bold-itc.ttf);
+    src: url("../../../../assets/fonts/eras-bold-itc.ttf");
 }
 
 @font-face {
     font-family: "carta2";
-    src: url(../../../../assets/fonts/erasef-medium.otf);
+    src: url("../../../../assets/fonts/erasef-medium.otf");
 }
 
 .bg-carta{
 
-    background-image: url(../../../../assets/Logos/carta.jpg);
+    background-image: url("../../../../assets/Logos/carta.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -32,7 +32,7 @@
 
 .bg-wtsp{
 
-    background-image: url(../../../../assets/Logos/wtsp.jpg);
+    background-image: url("../../../../assets/Logos/wtsp.jpg");
     
     background-attachment: fixed;
     
