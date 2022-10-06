@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-a1: boolean=true;
+a1: boolean=false;
 a2: boolean=true;
 a3: boolean=true;
 
@@ -19,20 +19,20 @@ a3: boolean=true;
   ngOnInit(): void {
   }
 
-ver(){
+Men1(){
  
   return this.a1 = false, this.a2=true, this.a3=true;
 
 }
 
-ver2(){
+Men2(){
 
  
   return this.a1 = true, this.a2=false, this.a3=true; 
 
 }
 
-ver3(){
+Men3(){
 
   return this.a1 = true, this.a2=true, this.a3=false;
 
