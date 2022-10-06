@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-a1: boolean=false;
+a1: boolean=true;
 a2: boolean=true;
 a3: boolean=true;
 
