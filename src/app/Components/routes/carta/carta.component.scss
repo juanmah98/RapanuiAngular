@@ -2,12 +2,11 @@
 
 .bg-carta{
 
-    background-image: url("../../../../assets/Logos/carta.jpg");
+    background-image: src("../../../../assets/Logos/carta.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    
     width: 100%;
     
     
@@ -24,7 +23,7 @@
 
 .bg-wtsp{
 
-    background-image: url("../../../../assets/Logos/wtsp.jpg");
+    background-image: src("../../../../assets/Logos/wtsp.jpg");
     
     background-attachment: fixed;
     
