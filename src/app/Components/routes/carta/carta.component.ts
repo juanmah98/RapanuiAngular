@@ -17,7 +17,9 @@ export class CartaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+}
 
   cartas: any = [
     // MESA
