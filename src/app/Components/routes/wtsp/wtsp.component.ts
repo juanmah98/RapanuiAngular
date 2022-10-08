@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-wtsp',
@@ -6,14 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wtsp.component.scss']
 })
 export class WtspComponent implements OnInit {
+formulario: FormGroup;
+  constructor(private menuServices: MenuService, private formBuilder: FormBuilder) {
 
-  constructor() { }
+    this.formulario = this.formBuilder.group(
+      {
+        name: [""],
+        desc: [""],
+        precio:[""],
+        categoria:[""]  
+         
+      },
+      
+    )
+   }
 
   ngOnInit(): void {
   }
 
-  wtsp = "https://api.whatsapp.com/send?phone=+5492645121080";
-  /* &text=_*RAPA-NUI DELIVERY*_ %0A%0A*Cliente:*%0A' + name + '%0A*Direccion:*%0A' + dir + '%0A*Telefono:*%0A' + telefono + '%0A*Pedido:*%0A' + pedido + '%0A*Detalle:*%0A' + detalle + '%0A*Forma de Pago:*%0A' + efectivo +  '' */
+  onSumbit(){
+    this.menuServices.addEntradas(this.formulario.value);
+  }
+
 
   
 

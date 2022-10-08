@@ -1,8 +1,15 @@
 {
   "projects": {
-    "default": "rapanuilomos-3e45a",
-    "master": "rapanuilomos-3e45a"
+    "default": "rapanuilomos-3e45a"
   },
-  "targets": {},
+  "targets": {
+    "rapanuilomos-3e45a": {
+      "hosting": {
+        "proyecto": [
+          "rapanui-lomos"
+        ]
+      }
+    }
+  },
   "etags": {}
 }

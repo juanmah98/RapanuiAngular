@@ -13,6 +13,7 @@ import { FormTemplateComponent } from './form-template/form-template.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { FrontComponent } from './front/front.component';
+import { WtspComponent } from './wtsp/wtsp.component';
 
 
 
@@ -28,6 +29,7 @@ import { FrontComponent } from './front/front.component';
     FormTemplateComponent,
     EjemploComponent,
     FrontComponent,
+    WtspComponent
     
     
   ],

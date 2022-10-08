@@ -1,106 +1,97 @@
-
 <div class="bg-wtsp">
-
-
-
-<div class="row container-fluid pt-3 ">
-    <div class="col container pt-5 d-flex justify-content-center ">
-
-        
-
-<div class="w-full max-w-xs ">
-    <p class="fs-2 text-center fw-bold text-warning ">REALIZA TU PEDIDO</p>
-    <form id="form" class="bg-white shadow-md rounded px-8 mt-4 pt-3 pb-3 mb-4 container-fluid ">
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold " for="name">
-                Nombre y Apellido
-            </label>
-            <input
-                class="shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="name" id="name" type="text" placeholder="Ingresa tu nombre" required>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
-                Direccion
-            </label>
-            <input
-                class="shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="lastname" id="dir" type="text" placeholder="Ingresa tus direccion" required>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
-                Número de Telefono
-            </label>
-            <input
-                class="shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="telefono" id="telefono" type="number" placeholder="Ingresa tu telefono" required>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
-                Pedido
-            </label>
-            <input
-                class="shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="pedido" id="pedido" type="text" placeholder="Ingresa tu pedido" required>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name">
-                Detalle / algo para aclarar del pedido
-            </label>
-            <input
-                class="shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="detalle" id="detalle" type="text" placeholder="Detalle no obligatorio" >
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="name" >
-                Foram de pago
-            </label> 
+    <div class="row container-fluid pt-3 pb-4 ">
+        <div class="col container pt-3 d-flex justify-content-center ">
+    
+        <div class="w-full max-w-xs ">
+            <p class="fs-2 text-center fw-bold text-warning fw-rapa pt-3">Carga de pedido</p>
+    
+            <div class="col  container-fluid text-center justify-content-center pb-2 " >
+    
+                         
+              
+              </div>
             
-            <!-- <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="pago" id="pago" type="text" placeholder="Efectivo / MercadoPago" required> -->
-
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Efectivo
+            <form  (ngSumbit)="onSumbit()" [formGroup]="formulario" id="form"  class="bg-white shadow-md rounded px-8 mt-4 pt-3 pb-3 mb-4 container-fluid ">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold " for="name">
+                        Producto
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Mercado Pago
+                    <input
+                        class="form-control  shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        formControlName="name"  id="name" type="text" placeholder="Ingresa tu nombre" >
+                </div>
+    
+               
+    
+              
+    
+               
+                <div class="mb-4" >
+                    <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="desc">
+                       Descripcion
                     </label>
-                  </div>
+                    <input
+                        class=" form-control shadow appearance-none border cuadro rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        formControlName="desc" id="dir" type="text" placeholder="Ingresa tu direccion">
+                </div>
+    
+                 
+             
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold " for="categoria">
+                        Categoria
+                    </label>
+                    <input
+                        class="form-control  shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        formControlName="categoria"  id="tel" type="text" placeholder="Ingresa tu telefono" >
+               
+                        <select formControlName="categoria" name="tipo" id="tipo">
+                            <option value="Entrada">Entrada</option>
+                            <option value="Papa">Papa</option>
+                            <option value="Lomo">Lomo</option>
+                            <option value="Pachata">Pachata</option>
+                            <option value="Ensalada">Ensalada</option>
+                            <option value="Miga">Miga</option>
+                            <option value="Hamburguesa">Hamburguesa</option>
+                            <option value="HamburguesaPaty">Hamburguesa paty</option>
+                            <option value="MenuInfantil">Menu Infantil</option>
+                            <option value="Pizza">Pizza</option>
+                            <option value="Gaseosa">Gaseosa</option>
+                            <option value="Cerveza">Cerveza</option>
+                            <option value="Agregado">Agregado</option>                        
+                        </select>
+                    </div>
+    
+               
                 
-        </div>
-
-
-        <div class="flex items-center justify-between ">
-            <button id="submit"
-                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline btn btn-success border"
-                type="submit">
-                <i class="fab fa-whatsapp"></i> Enviar WhatsApp
-            </button>
-        </div>
-    </form>
+               
     
-</div>
-
-
-</div>  
-</div>
-
-<div class="col-xs-12 col-sm-12 col-lg-4 col-md-12  container-fluid text-center justify-content-center pb-4 pb-2" >
-
-<div class="card shadow p-3"> 
-    <p> Recuerda ser lo mas claro posible cuando gestiones tu pedido </p>
-    <p> <b>Zonas de envios:</b>  Capital, Santa Lucia y Rivadavia </p>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 d-flex fw-bold" for="precio">
+                        Precio
+                    </label>
+                    
+                    <input
+                        class="form-control  shadow appearance-none cuadro border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        formControlName="precio"  id="tel" type="text" placeholder="Ingresa tu telefono" >
+                </div>
+                
     
-</div>
-
-
-</div>
-
-<script src="../../../../assets/js/herlpers.js"></script>
-<script src="../../../../assets/js/whatsapp.js"></script>
+                <div class="text-center">
+                    <button class="btn btn-primary" (click)="onSumbit()">Cargar producto</button>
+                </div>
+    
+              </form>
+    
+              
+    
+                
+               
+            
+              
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
