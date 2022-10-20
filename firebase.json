@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "./dist/proyecto",
+    "site": "rapanui-lomos",
     "ignore": [
       "firebase.json",
       "**/.*",
