@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "angularfirstsj"
-  }
+    "default": "angularfirstsj",
+    "rapanui": "rapanuilomos-3e45a"
+  },
+  "targets": {},
+  "etags": {}
 }
