@@ -11,11 +11,13 @@ import { FormReactiveComponent } from './Components/routes/form-reactive/form-re
 import { FormTemplateComponent } from './Components/routes/form-template/form-template.component';
 import { EjemploComponent } from './Components/routes/ejemplo/ejemplo.component';
 import { FrontComponent } from './Components/routes/front/front.component';
+import { SpaceComponent } from './Components/routes/space/space.component';
 
 const routes: Routes = [
 
   {path: '', component: HomeComponent},
   {path: 'card', component: CardComponent},
+  {path: 'space', component: SpaceComponent},
   {path: 'carta', component: CartaComponent},
   {path: 'wtsp', component: WtspComponent},
   {path: 'juego', component: JuegoComponent},
